@@ -1,10 +1,12 @@
-import Home from "./pages/home/home";
-import Watch from "./pages/watch/Watch";
+
+import Register from "./register/Register";
+import Home from './pages/home/home'
+
 
 function App() {
   return (
     <div>
-      <Watch />
+      <Home />
     </div>
   );
 }

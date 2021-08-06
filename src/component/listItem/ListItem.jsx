@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Movies_image from '../../Svg/images.jpg'
-import { MdAdd, MdPlayArrow, MdThumbDown, MdThumbsUpDown, MdThumbUp, } from 'react-icons/md'
+import { MdAdd, MdPlayArrow, MdThumbDown, MdThumbUp, } from 'react-icons/md'
 
 function ListItem({index}) {
   const [isHovered, setIsHovered] = useState(false)
@@ -11,7 +11,7 @@ function ListItem({index}) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img src={Movies_image} alt="movies" />
+      <img src={"https://images.moviesanywhere.com/7d0f58fb4eee90c8f8512822b7a5da28/a19b0572-59fa-4986-a274-0bbeb62c63fe.jpg"} alt="movies" />
       {isHovered &&(
       <>
       <video src={trailer} autoPlay={true} loop />
