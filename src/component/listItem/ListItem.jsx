@@ -4,7 +4,7 @@ import { MdAdd, MdPlayArrow, MdThumbDown, MdThumbsUpDown, MdThumbUp, } from 'rea
 
 function ListItem({index}) {
   const [isHovered, setIsHovered] = useState(false)
-  const trailer = "https://www.youtube.com/embed/MysGjRS9jFU"
+  const trailer = "https://www.w3schools.com/tags/movie.ogg"
   return (
     <div className='listitem'
       style={{left: isHovered && (index * 225) - 50 + (index * 2.5)}}
