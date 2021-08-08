@@ -26,7 +26,7 @@ function Feature({type}) {
           </select>
         </div>
       )}
-      <img src={User} className='feature-image' alt="user" />
+      <img src={"https://images.moviesanywhere.com/7d0f58fb4eee90c8f8512822b7a5da28/a19b0572-59fa-4986-a274-0bbeb62c63fe.jpg"} className='feature-image' alt="user" />
       <div className="info">
         <img src={Matrix} alt='movie name' />
         <span className='desc'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.

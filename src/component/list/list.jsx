@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import { BiLeftArrow, BiRightArrow } from 'react-icons/bi'
-import { MdTurnedInNot } from 'react-icons/md'
 import ListItem from '../listItem/ListItem'
 
 const List = () => {
@@ -12,7 +11,7 @@ const List = () => {
   const handleClick = (direction) => {
     
     let distance = listRef.current.getBoundingClientRect().x - 50
-    if(slideNumber == 0){
+    if(slideNumber === 0){
       setIsmoved(false)
     }else{
       setIsmoved(true)

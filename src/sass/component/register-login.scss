@@ -1,0 +1,185 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%),url("../../Svg/netflix-background.jpg");
+    background-size: cover;
+    position: relative;
+
+    &__top{
+        .register__wrap{
+            padding: 2rem 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            .register__logo{
+                height: 4rem;
+            }
+
+            .loginButton{
+                background-color: red;
+                border: none;
+                color: #fff;
+                border-radius: .5rem;
+                padding: .5rem 1.5rem;
+                font-size: 1.6rem;
+                font-weight: 500;
+                cursor: pointer;
+                box-shadow: 0 .5rem .8rem rgba(22,22,22, .5);
+            }
+        }
+    }
+
+    &__container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+        h1{
+            font-size: 5rem;
+        }
+        h2{
+            margin: 2rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+
+        .input{
+            width: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            height: 5rem;
+            border-radius: .5rem;
+
+            input{
+                width: 80%;
+                height: 100%;
+                border: none;
+                font-size: 2rem;
+                padding: 0 1rem;
+            }
+            .registerButton{
+                width: 20%;
+                height: 100%;
+                border: none;
+                font-size: 2rem;
+                background-color: red;
+                color: white;
+                box-shadow: inset 1rem 1rem 4rem rgba(22,22,22, .5);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.login{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%),url("../../Svg/netflix-background.jpg");
+    background-size: cover;
+    position: relative;
+
+    &__top{
+        .login__wrap{
+            padding: 2rem 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            .login__logo{
+                height: 4rem;
+            }
+        }
+    }
+
+    &__container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+       form{
+           width: 30rem;
+           height: 30rem;
+           padding: 3rem;
+           border-radius: 0.5rem;
+           background-color: var(--main-color);
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           align-items: center;
+           h1 {
+            font-size: 3.8rem;
+        }
+        input{
+           height: 4rem;
+           border-radius: .5rem;
+           background-color: grey;
+           color: white;
+           padding: 0 1rem;
+           border: none;
+           outline: red;
+           width: 90%;
+           transition: all .5s ease;
+
+           &:hover {
+               background-color: lighten(red, 50%);
+               color: black;
+           }
+
+           &::placeholder {
+               color: lightgrey;
+           }
+        }
+
+        button{
+            height: 4rem;
+            border-radius: .5rem;
+            background-color: rgb(223, 203, 203);
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: black;
+            width: 40%;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: red;
+                color: white;
+            }
+        }
+
+        span {
+            color: lightgrey;
+
+            b{
+                cursor: pointer;
+
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+       
+       }
+       
+    }
+}
