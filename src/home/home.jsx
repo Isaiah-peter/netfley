@@ -1,13 +1,12 @@
 import React from 'react'
 import Navbar from '../component/navbar/Navbar'
-import User from '../Svg/imageIsaiah.png'
-
+import Feature from '../component/feature/Feature'
 
 function Home() {
   return (
     <div className='home'>
       <Navbar />
-      <img width='100%' height='100%' src={User} alt="user" />
+      <Feature/>
     </div>
   )
 }
