@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
-import Movies_image from '../../Svg/images.jpg'
+import React, { useState} from 'react'
 import { MdAdd, MdPlayArrow, MdThumbDown, MdThumbUp, } from 'react-icons/md'
+
 
 function ListItem({index}) {
   const [isHovered, setIsHovered] = useState(false)
+  
+
   const trailer = "https://www.w3schools.com/tags/movie.ogg"
   return (
     <div className='listitem'

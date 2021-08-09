@@ -1,10 +1,29 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
+import axios from 'axios'
 import { BiLeftArrow, BiRightArrow } from 'react-icons/bi'
 import ListItem from '../listItem/ListItem'
 
 const List = () => {
   const [slideNumber ,setSlideNumber] = useState(0)
   const [isMoved ,setIsmoved] = useState(false)
+
+  useEffect(() => {
+    getMovies()
+  }, [])
+
+ const getMovies = async () => {
+   try{
+     const res = await axios.get("http://Localhost:8000/movies/",{
+       headers:{
+        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOjE2LCJJc0FkbWluIjp0cnVlLCJleHAiOjE2MzQyODg0OTZ9.7lPQgd3p1X5BQ2SbK9lTfntnPb1BOcfaW55p0fPpnfA"
+       }
+     })
+
+     console.log(res)
+   }catch(err){
+     console.log(err)
+   }
+ }
 
   const listRef = useRef()
 

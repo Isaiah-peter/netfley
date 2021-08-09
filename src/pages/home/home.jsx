@@ -3,11 +3,11 @@ import Navbar from '../../component/navbar/Navbar'
 import Feature from '../../component/feature/Feature'
 import List from '../../component/list/list'
 
-function Home() {
+function Home({type}) {
   return (
     <div className='home'>
       <Navbar />
-      <Feature/>
+      <Feature type={type}/>
       <List />
       <List />
       <List />
