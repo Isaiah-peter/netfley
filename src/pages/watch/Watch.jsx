@@ -1,15 +1,20 @@
 import React from 'react'
 import { MdArrowBack } from 'react-icons/md'
+import { Link, useLocation } from 'react-router-dom'
 
 function Watch() {
-  const trailer = "https://www.w3schools.com/tags/movie.ogg"
+  const location = useLocation()
+  const movie = location.movie
+  const trailer = movie.Video
   return (
     <div className='watch'>
+       <Link to='/' className='link'>
       <div className="back">
         <MdArrowBack />
         home 
       </div>
-      <video className='video' autoPlay progress controls src={trailer} />
+      </Link>
+      <video className='video' autoPlay progress="true" controls src={trailer} />
     </div>
   )
 }

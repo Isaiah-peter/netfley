@@ -1,9 +1,12 @@
-import React from 'react'
-import User from '../../Svg/movies.png'
+import React, { useRef, useState, useEffect } from 'react'
 import Matrix from '../../Svg/image.png'
 import { MdInfoOutline, MdPlayArrow } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
-function Feature({type}) {
+function Feature({ type, movie }) {
+
+
+
   return (
     <div className='feature'>
       {type && (
@@ -26,25 +29,30 @@ function Feature({type}) {
           </select>
         </div>
       )}
-      <img src={"https://images.moviesanywhere.com/7d0f58fb4eee90c8f8512822b7a5da28/a19b0572-59fa-4986-a274-0bbeb62c63fe.jpg"} className='feature-image' alt="user" />
-      <div className="info">
-        <img src={Matrix} alt='movie name' />
-        <span className='desc'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Natus distinctio iure assumenda vero! Aliquam harum nisi
-          praesentium, doloremque fugit quos veniam atque ducimus
-          veritatis in accusamus laborum, officia repellat impedit
-        </span>
-        <div className="buttons">
-          <button className="play">
-            <MdPlayArrow className='f-icon'/>
-            <span>Play</span>
-          </button>
-          <button className="more">
-            <MdInfoOutline className='f-icon'/>
-            <span>info</span>
-          </button>
-        </div>
-      </div>
+      {movie !== undefined && (
+        <>
+          <img src={movie.Img} className='feature-image' alt="user" />
+          <div className="info">
+            <img src={Matrix} alt='movie name' />
+            <span className='desc'>{movie.Disc}
+            </span>
+            <div className="buttons">
+            <Link to = {{pathname:'/watch', movie:movie}} className='link' >
+              <button className="play">
+                <MdPlayArrow className='f-icon' />
+                <span>Play</span>
+              </button>
+              </Link>
+              <button className="more">
+                <MdInfoOutline className='f-icon' />
+                <span>info</span>
+              </button>
+            </div>
+
+          </div>
+        </>
+      )}
+
     </div>
   )
 }

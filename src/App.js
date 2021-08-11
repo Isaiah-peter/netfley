@@ -11,7 +11,7 @@ import Watch from "./pages/watch/Watch"
 function App() {
   const user = true
   return (
-    <Router>
+    <Router >
       <Switch>
         <Route exact path='/'>
           {user ? <Home type="movies" /> : <Redirect to="/register" />}
