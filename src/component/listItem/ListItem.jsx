@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
-import Movies_image from '../../Svg/images.jpg'
+import React, { useState} from 'react'
 import { MdAdd, MdPlayArrow, MdThumbDown, MdThumbUp, } from 'react-icons/md'
+import {Link} from 'react-router-dom'
 
-function ListItem({index}) {
+
+function ListItem({data,index}) {
   const [isHovered, setIsHovered] = useState(false)
-  const trailer = "https://www.w3schools.com/tags/movie.ogg"
+  
+  const trailer = data.Trailer
   return (
+    <Link to={{ pathname:"/watch", movie:data }}>
     <div className='listitem'
       style={{left: isHovered && (index * 225) - 50 + (index * 2.5)}}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img src={"https://images.moviesanywhere.com/7d0f58fb4eee90c8f8512822b7a5da28/a19b0572-59fa-4986-a274-0bbeb62c63fe.jpg"} alt="movies" />
+      <img src={data.Img} alt="movies" />
       {isHovered &&(
       <>
       <video src={trailer} autoPlay={true} loop />
@@ -23,20 +26,19 @@ function ListItem({index}) {
           <MdThumbDown className="icon"/>
         </div>
         <div className="iteminfotop">
-          <span>1 hour and 16 min</span>
-          <span className="limit">+16</span>
-          <span>1999</span>
+          <span>{data.Title}</span>
+          <span className="limit">+{data.Limit}</span>
+          <span>{data.Year}</span>
         </div>
         <div className="desc">
-          Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Maiores quisquam omnis
-          a? Esse, ullam dolorem? Molestiae id .
+         {data.Disc}
         </div>
-        <div className="genre">Action thrillers</div>
+        <div className="genre">{data.Genre}</div>
       </div>
       </>
       )}
     </div>
+    </Link>
   )
 }
 
